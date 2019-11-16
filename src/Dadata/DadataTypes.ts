@@ -1,13 +1,17 @@
 export type Suggestion = {
+    data: SuggestionData
     value: string,
     unrestricted_value: string
-    data: SuggestionData
 }
 
 export type SuggestionData = {
+    address: SuggestionAddress,
+    management: SuggestionManagement,
+    state: SuggestionState,
+    opf: SuggestionOpf,
+    name: SuggestionName,
     kpp: string,
     capital: null,  
-    management: SuggestionManagement,
     founders: null,
     managers: null,
     branch_type: string,
@@ -16,9 +20,6 @@ export type SuggestionData = {
     qc: null,
     hid: string,
     type: string,
-    state: SuggestionState,
-    opf: SuggestionOpf,
-    name: SuggestionName,
     inn: string,
     ogrn: string,
     okpo: null,
@@ -28,7 +29,6 @@ export type SuggestionData = {
     documents: null,
     licenses: null,
     finance: null,
-    address: SuggestionAddress,
     phones: null,
     emails: null,
     ogrn_date: number,
@@ -37,9 +37,9 @@ export type SuggestionData = {
 }
 
 export type SuggestionAddress = {
+    data: SuggestionAddressData
     value: string,
     unrestricted_value: string,
-    data: SuggestionAddressData
 }
 
 export type SuggestionAddressData = {
