@@ -5,7 +5,7 @@ import * as DadataTypes from './DadataTypes';
 import styles from './Dadata.module.scss';
 
 
-export type DadataState = {
+export interface DadataState {
     inputValue: string
     suggestions: Array<DadataTypes.Suggestion>
     closed: boolean

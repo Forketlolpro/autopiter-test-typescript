@@ -1,10 +1,10 @@
-export type Suggestion = {
+export interface Suggestion {
     data: SuggestionData
     value: string,
     unrestricted_value: string
 }
 
-export type SuggestionData = {
+export interface SuggestionData {
     address: SuggestionAddress,
     management: SuggestionManagement,
     state: SuggestionState,
@@ -36,13 +36,13 @@ export type SuggestionData = {
     employee_count: null
 }
 
-export type SuggestionAddress = {
+export interface SuggestionAddress {
     data: SuggestionAddressData
     value: string,
     unrestricted_value: string,
 }
 
-export type SuggestionAddressData = {
+export interface SuggestionAddressData {
     area: string
     area_fias_id: string
     area_kladr_id: string
@@ -126,27 +126,27 @@ export type SuggestionAddressData = {
     unparsed_parts: null
 }
 
-export type SuggestionManagement = {
+export interface SuggestionManagement {
     name: string,
     post: string
     disqualified: null
 }
 
-export type SuggestionState = {
+export interface SuggestionState {
     status: string,
     actuality_date: number,
     registration_date: number,
     liquidation_date: null
 }
 
-export type SuggestionOpf = {
+export interface SuggestionOpf {
     type: string,
     code: string,
     full: string,
     short: string
 }
 
-export type SuggestionName = {
+export interface SuggestionName {
     full_with_opf: string
     short_with_opf: string
     latin: null,
