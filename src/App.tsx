@@ -1,14 +1,16 @@
 import React from 'react';
-import Button from './UI/Button/Button'
-import Dadata from './Dadata/Dadata';
-import * as dadataTypes from './Dadata/DadataTypes';
-import './App.css';
+import Header from './Header/Header';
+import Layout from './Layout/Layout';
+import Main from './Main/Main';
+import styles from './App.module.scss';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Button actionType='save' onClickHandler={(e)=>console.log('click')}>Нажми</Button>
-      <Dadata onSuggestionSelect={(item: dadataTypes.Suggestion)=>console.log(item)}/>
+    <div className={styles.App}>
+      <Header/>
+      <Layout>
+        <Main/>
+      </Layout>
     </div>
   );
 }

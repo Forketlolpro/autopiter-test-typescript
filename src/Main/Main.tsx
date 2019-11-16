@@ -5,28 +5,43 @@ import * as actions from '../Store/actions';
 import SelectedItem from '../SelectedItem/SelectedItem';
 import SelectItemsList from '../SelectItemsList/SelectItemsList';
 import styles from './Main.module.scss'
+import { Suggestion } from '../Dadata/DadataTypes';
 
-class Main extends Component{
+export interface MainState {
+    activeTab: string | undefined
+    buttonType: string
+}
+
+export interface MainProps  {
+    selectedItem: Suggestion
+    organizationList: Array<Suggestion>
+    saveDispatch: any
+    selectDispatch: any
+    removeDispatch: any
+}
+
+class Main extends Component<MainProps, MainState> {
     state= {
         activeTab: 'new',
         buttonType: 'save'
     }
 
-    onTabClickHandler = (e) => {
-        this.setState({activeTab: e.currentTarget.dataset.lable})
+    onTabClickHandler = (e: React.SyntheticEvent<HTMLDivElement>) => {
+        const target = e.target as HTMLElement;
+        this.setState({activeTab: target.dataset.lable})
     }
 
-    onSaveButtonClickHandler = (item) => () =>  {
+    onSaveButtonClickHandler = (item: Suggestion) => () =>  {
         this.setState({buttonType: 'saved'});
         this.props.saveDispatch(item);
     }
 
-    onSuggestionsClickHandler = (item) => {
+    onSuggestionsClickHandler = (item: Suggestion) => {
         this.setState({buttonType: 'save'})
         this.props.selectDispatch(item);
     }
 
-    onRemoveItemClickHandler = (index) => () =>  {
+    onRemoveItemClickHandler = (index: number) => () =>  {
         this.props.removeDispatch(index);
     }
 
@@ -56,18 +71,18 @@ class Main extends Component{
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
     return {
         selectedItem: state.selectedItem,
         organizationList: state.organizationList
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: any) => {
     return {
-        selectDispatch: (item) => dispatch(actions.dadataSelectItem(item)),
-        saveDispatch: (item) => dispatch(actions.saveOrganization(item)),
-        removeDispatch: (index) => dispatch(actions.removeOrganization(index))
+        selectDispatch: (item: Suggestion) => dispatch(actions.dadataSelectItem(item)),
+        saveDispatch: (item: Suggestion) => dispatch(actions.saveOrganization(item)),
+        removeDispatch: (index: number) => dispatch(actions.removeOrganization(index))
     }
 }
 

@@ -1,0 +1,74 @@
+.Item {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    h2 {
+        font-size: 24px;
+        line-height: 45px;
+        color: #2B2829;
+        border-bottom: 1px solid #DFDFDF;
+        margin-top: 33px;
+        margin-bottom: 24px;
+    }
+}
+
+.Itemcontent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Addressdata {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+        margin-bottom: 13px;
+    }
+
+    span {
+        margin-bottom: 31px;
+    }
+}
+
+.Organizationdata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+    height: fit-content;
+    background-color: #F8F8F8;
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        strong {
+            margin-right: 5px;
+        }
+    }
+}
+
+.Emptyitem {
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+
+
+    div {
+        font-size: 14px;
+        line-height: 20px;
+        color: #777777;
+        margin-left: 32px;
+        width: 300px;
+    }
+
+    img {
+        width: 68px;
+        height: 68px;
+    }
+}
