@@ -1,29 +1,19 @@
 import React, {Component, createRef} from 'react';
 import DadataResult from './DadataResult/DadataResult';
 import axios from '../axios-instance';
+import * as DadataTypes from './DadataTypes';
 import styles from './Dadata.module.scss';
-
-export type Suggestions = {
-    value: string,
-    unrestricted_value: string
-    data: SuggestionsData
-}
-
-export type SuggestionsData = {
-    kpp: string,
-    
-}
 
 
 export type DadataState = {
     inputValue: string
-    suggestions: any
+    suggestions: Array<DadataTypes.Suggestion>
     closed: boolean
 }
 
 export interface DadataProps  {
     title?: string,
-    onSuggestionSelect: (item: any) => void;
+    onSuggestionSelect: (item: DadataTypes.Suggestion) => void;
 }
 
 
@@ -34,7 +24,7 @@ class Dadata extends Component<DadataProps, DadataState> {
         super(props);
         this.state = {
             inputValue: '',
-            suggestions: null,
+            suggestions: [],
             closed: false
         }
 
