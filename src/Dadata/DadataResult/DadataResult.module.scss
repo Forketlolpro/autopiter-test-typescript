@@ -1,0 +1,54 @@
+.Wrapper {
+    padding-top: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-top: none;
+    box-sizing: border-box;
+    border-radius: 0px 0px 3px 3px;
+    z-index: 1;
+    position: relative;
+    bottom: 1px;
+
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    height: fit-content;
+}
+
+.Elem {
+    height: 53px;
+    color: #2B292A;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 0 2px 23px;
+    box-sizing: border-box;
+
+    &:hover {
+        background: #F8F8F8;  
+    }
+}
+
+.Header {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 600;
+    width: 100%;
+    text-align: start;
+}
+
+.Inn {
+    font-family: 'Verdana', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.City {
+    font-family: 'Verdana', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    margin-left: 15px;
+}

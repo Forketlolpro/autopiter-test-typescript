@@ -1,0 +1,50 @@
+.Main {
+    width: 736px;
+
+    h1 {
+        font-size: 40px;
+        line-height: 49px;
+        margin: 60px 0 29px 7px;
+    }
+}
+
+.Tabnav {
+    display: flex;
+    background: #F8F8F8;
+
+    .Navitem {
+        color: #B9B9B9;
+        //width: 150px;
+        font-size: 12px;
+        line-height: 18px;
+        background: #F8F8F8;
+        cursor: pointer;
+        height: 37px;
+        box-sizing: border-box;
+        padding: 6px 24px 11px 24px;
+        font-weight: 600;
+        border-top: 2px solid #F8F8F8;
+    }
+
+    .Active {
+        border-top: 2px solid #F50634;
+        color: #2B2829;
+        background-color: white;
+        cursor: default;
+
+        span {
+            color: #F50634;
+        }
+    }
+}
+
+.Tabs {
+    background-color: white;
+}
+
+.Tab {
+    width: 736px;
+    height: 568px;
+    padding: 32px 24px 0 24px;
+    box-sizing: border-box;
+}

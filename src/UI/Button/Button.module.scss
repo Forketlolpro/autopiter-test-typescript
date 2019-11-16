@@ -1,0 +1,27 @@
+.Button {
+    margin: 0;
+    padding: 0;
+    width: 186px;
+    height: 46px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.Save {
+    background-color: #F50634;
+    color: white;
+    font-size: 18px;
+}
+
+.Saved {
+    background-color: white;
+    cursor: not-allowed;
+    color: #B9B9B9;
+
+    &::before {
+        content: '\002714';
+        margin-right: 10px;
+    }
+}
